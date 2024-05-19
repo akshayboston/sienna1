@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 rm inventory.json
-IFS=', ' read -r -a array < data/dealers.txt
+IFS=', ' read -r -a array < dealers.txt
 
 for i in ${array[@]}
 do
@@ -18,7 +18,7 @@ do
       "pagestart": 0,
       "filter": {
           "year": [2023, 2024], 
-          "series": ["tacoma", "sienna"], 
+          "series": ["sienna"], 
           "dealers": ["'$i'"],
           "andfields": ["accessory", "packages", "dealer"]
         }
